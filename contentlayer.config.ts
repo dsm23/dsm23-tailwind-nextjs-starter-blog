@@ -1,5 +1,6 @@
 import { writeFileSync } from "fs";
 import path from "path";
+import siteMetadata from "@/data/siteMetadata";
 import {
   ComputedFields,
   defineDocumentType,
@@ -26,7 +27,6 @@ import rehypeSlug from "rehype-slug";
 import remarkGfm from "remark-gfm";
 import { remarkAlert } from "remark-github-blockquote-alert";
 import remarkMath from "remark-math";
-import siteMetadata from "./data/siteMetadata";
 
 const root = process.cwd();
 const isProduction = process.env.NODE_ENV === "production";
@@ -78,7 +78,7 @@ function createTagCount(allBlogs) {
       });
     }
   });
-  writeFileSync("./app/tag-data.json", JSON.stringify(tagCount));
+  writeFileSync("./src/app/tag-data.json", JSON.stringify(tagCount));
 }
 
 function createSearchIndex(allBlogs) {
@@ -148,7 +148,7 @@ export const Authors = defineDocumentType(() => ({
 }));
 
 export default makeSource({
-  contentDirPath: "data",
+  contentDirPath: "src/data",
   documentTypes: [Blog, Authors],
   mdx: {
     cwd: process.cwd(),
@@ -173,7 +173,7 @@ export default makeSource({
         },
       ],
       rehypeKatex,
-      [rehypeCitation, { path: path.join(root, "data") }],
+      [rehypeCitation, { path: path.join(root, "src/data") }],
       [rehypePrismPlus, { defaultLanguage: "js", ignoreMissing: true }],
       rehypePresetMinify,
     ],

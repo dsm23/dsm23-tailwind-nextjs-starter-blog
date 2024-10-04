@@ -88,6 +88,14 @@ module.exports = () => {
         },
       ];
     },
+    rewrites() {
+      return [
+        { source: "/healthz", destination: "/api/health" },
+        { source: "/api/healthz", destination: "/api/health" },
+        { source: "/health", destination: "/api/health" },
+        { source: "/ping", destination: "/api/health" },
+      ];
+    },
     webpack: (config, options) => {
       config.module.rules.push({
         test: /\.svg$/,

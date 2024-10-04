@@ -1,6 +1,6 @@
-import { genPageMetadata } from "src/app/seo";
-import Card from "src/components/Card";
-import projectsData from "src/data/projectsData";
+import { genPageMetadata } from "~/app/seo";
+import Card from "~/components/Card";
+import projectsData from "~/data/projectsData";
 
 export const metadata = genPageMetadata({ title: "Projects" });
 

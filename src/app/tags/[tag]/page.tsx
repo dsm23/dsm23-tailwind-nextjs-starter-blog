@@ -3,10 +3,10 @@ import { notFound } from "next/navigation";
 import { allBlogs } from "contentlayer/generated";
 import { slug } from "github-slugger";
 import { allCoreContent, sortPosts } from "pliny/utils/contentlayer";
-import { genPageMetadata } from "src/app/seo";
-import tagData from "src/app/tag-data.json";
-import siteMetadata from "src/data/siteMetadata";
-import ListLayout from "src/layouts/ListLayoutWithTags";
+import { genPageMetadata } from "~/app/seo";
+import tagData from "~/app/tag-data.json";
+import siteMetadata from "~/data/siteMetadata";
+import ListLayout from "~/layouts/ListLayoutWithTags";
 
 export async function generateMetadata({
   params,

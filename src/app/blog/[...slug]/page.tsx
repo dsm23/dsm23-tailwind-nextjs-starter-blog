@@ -7,13 +7,13 @@ import {
   coreContent,
   sortPosts,
 } from "pliny/utils/contentlayer";
-import { components } from "src/components/MDXComponents";
-import PageTitle from "src/components/PageTitle";
-import siteMetadata from "src/data/siteMetadata";
-import PostBanner from "src/layouts/PostBanner";
-import PostLayout from "src/layouts/PostLayout";
-import PostSimple from "src/layouts/PostSimple";
 import type { Authors, Blog } from "contentlayer/generated";
+import { components } from "~/components/MDXComponents";
+import PageTitle from "~/components/PageTitle";
+import siteMetadata from "~/data/siteMetadata";
+import PostBanner from "~/layouts/PostBanner";
+import PostLayout from "~/layouts/PostLayout";
+import PostSimple from "~/layouts/PostSimple";
 
 import "~/css/prism.css";
 import "katex/dist/katex.css";

@@ -1,11 +1,11 @@
 import { Metadata } from "next";
 import { Space_Grotesk } from "next/font/google";
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
-import SectionContainer from "@/components/SectionContainer";
-import siteMetadata from "@/data/siteMetadata";
 import { Analytics, AnalyticsConfig } from "pliny/analytics";
 import { SearchConfig, SearchProvider } from "pliny/search";
+import Footer from "~/components/Footer";
+import Header from "~/components/Header";
+import SectionContainer from "~/components/SectionContainer";
+import siteMetadata from "~/data/siteMetadata";
 import { ThemeProviders } from "./theme-providers";
 
 import "~/css/tailwind.css";

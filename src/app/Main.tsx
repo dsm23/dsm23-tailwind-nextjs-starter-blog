@@ -1,8 +1,8 @@
 import NewsletterForm from "pliny/ui/NewsletterForm";
 import { formatDate } from "pliny/utils/formatDate";
-import Link from "src/components/Link";
-import Tag from "src/components/Tag";
-import siteMetadata from "src/data/siteMetadata";
+import Link from "~/components/Link";
+import Tag from "~/components/Tag";
+import siteMetadata from "~/data/siteMetadata";
 
 const MAX_DISPLAY = 5;
 

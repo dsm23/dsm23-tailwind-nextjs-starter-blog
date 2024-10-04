@@ -30,6 +30,8 @@ public/sitemap.xml
 
 # misc
 .DS_Store
+*.pem
+.vscode/settings.json
 
 # debug
 *.log

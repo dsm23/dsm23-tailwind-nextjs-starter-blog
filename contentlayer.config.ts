@@ -1,6 +1,5 @@
 import { writeFileSync } from "fs";
 import path from "path";
-import siteMetadata from "@/data/siteMetadata";
 import {
   ComputedFields,
   defineDocumentType,
@@ -27,6 +26,7 @@ import rehypeSlug from "rehype-slug";
 import remarkGfm from "remark-gfm";
 import { remarkAlert } from "remark-github-blockquote-alert";
 import remarkMath from "remark-math";
+import siteMetadata from "~/data/siteMetadata";
 
 const root = process.cwd();
 const isProduction = process.env.NODE_ENV === "production";

@@ -17,8 +17,7 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"],
-      "~/css/*": ["src/css/*"],
+      "~/*": ["src/*"],
       "contentlayer/generated": ["./.contentlayer/generated"]
     },
     "plugins": [

@@ -7,7 +7,7 @@ import {
   disableBodyScroll,
   enableBodyScroll,
 } from "body-scroll-lock";
-import headerNavLinks from "src/data/headerNavLinks";
+import headerNavLinks from "~/data/headerNavLinks";
 import Link from "./Link";
 
 const MobileNav = () => {

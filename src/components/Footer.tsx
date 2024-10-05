@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer>
       <div className="mt-16 flex flex-col items-center">
-        <div className="mb-3 flex space-x-4">
+        <nav className="mb-3 flex space-x-4" aria-label="Social Media">
           <SocialIcon
             kind="mail"
             href={`mailto:${siteMetadata.email}`}
@@ -20,7 +20,7 @@ export default function Footer() {
           <SocialIcon kind="x" href={siteMetadata.x} size={6} />
           <SocialIcon kind="instagram" href={siteMetadata.instagram} size={6} />
           <SocialIcon kind="threads" href={siteMetadata.threads} size={6} />
-        </div>
+        </nav>
         <div className="mb-2 flex space-x-2 text-sm text-gray-500 dark:text-gray-400">
           <div>{siteMetadata.author}</div>
           <div>{` • `}</div>

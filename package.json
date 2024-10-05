@@ -3,6 +3,7 @@
   "version": "2.2.0",
   "private": true,
   "scripts": {
+    "prepare": "husky",
     "start": "next dev",
     "dev": "cross-env INIT_CWD=$PWD next dev",
     "build": "cross-env INIT_CWD=$PWD next build && cross-env NODE_OPTIONS='--experimental-json-modules' node ./scripts/postbuild.mjs",
@@ -12,7 +13,7 @@
     "analyze": "cross-env ANALYZE=true next build",
     "lint:css": "stylelint \"**/*.css\" --max-warnings 0 --allow-empty-input --cache --cache-strategy=content --cache-location=.stylelintcache",
     "lint": "next lint --fix --dir pages --dir app --dir components --dir lib --dir layouts --dir scripts",
-    "prepare": "husky"
+    "playwright": "playwright"
   },
   "dependencies": {
     "@headlessui/react": "2.1.9",
@@ -51,12 +52,15 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.10.0",
     "@commitlint/cli": "^19.4.0",
     "@commitlint/config-conventional": "^19.2.2",
     "@commitlint/types": "^19.5.0",
     "@ianvs/prettier-plugin-sort-imports": "^4.3.1",
+    "@playwright/test": "^1.47.2",
     "@svgr/webpack": "^8.0.1",
     "@types/mdx": "^2.0.12",
+    "@types/node": "^22.7.4",
     "@types/react": "^18.2.73",
     "@typescript-eslint/eslint-plugin": "^8.8.0",
     "@typescript-eslint/parser": "^8.8.0",

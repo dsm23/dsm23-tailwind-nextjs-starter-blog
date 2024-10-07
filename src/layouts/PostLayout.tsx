@@ -80,7 +80,7 @@ export default function PostLayout({
                           width={38}
                           height={38}
                           alt="avatar"
-                          className="h-10 w-10 rounded-full"
+                          className="size-10 rounded-full"
                         />
                       )}
                       <dl className="whitespace-nowrap text-sm font-medium leading-5">
@@ -111,7 +111,7 @@ export default function PostLayout({
               <div className="prose max-w-none pb-8 pt-10 dark:prose-invert">
                 {children}
               </div>
-              <div className="pb-6 pt-6 text-sm text-gray-700 dark:text-gray-300">
+              <div className="py-6 text-sm text-gray-700 dark:text-gray-300">
                 <Link href={discussUrl(path)} rel="nofollow">
                   Discuss on Twitter
                 </Link>
@@ -120,7 +120,7 @@ export default function PostLayout({
               </div>
               {siteMetadata.comments && (
                 <div
-                  className="pb-6 pt-6 text-center text-gray-700 dark:text-gray-300"
+                  className="py-6 text-center text-gray-700 dark:text-gray-300"
                   id="comment"
                 >
                   <Comments slug={slug} />

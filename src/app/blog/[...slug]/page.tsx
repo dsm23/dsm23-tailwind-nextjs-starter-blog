@@ -9,7 +9,6 @@ import {
 } from "pliny/utils/contentlayer";
 import type { Authors, Blog } from "contentlayer/generated";
 import { components } from "~/components/MDXComponents";
-import PageTitle from "~/components/PageTitle";
 import siteMetadata from "~/data/siteMetadata";
 import PostBanner from "~/layouts/PostBanner";
 import PostLayout from "~/layouts/PostLayout";

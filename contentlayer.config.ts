@@ -90,7 +90,7 @@ function createSearchIndex(allBlogs) {
       `public/${path.basename(siteMetadata.search.kbarConfig.searchDocumentsPath)}`,
       JSON.stringify(allCoreContent(sortPosts(allBlogs))),
     );
-    console.log("Local search index generated...");
+    console.info("Local search index generated...");
   }
 }
 

@@ -46,6 +46,11 @@ yarn-error.log*
 .env.test.local
 .env.production.local
 
+# cache Files
+.eslintmdcache
+.stylelintcache
+.prettiercache
+
 # Contentlayer
 .contentlayer
 

@@ -1,3 +1,5 @@
+import forms from "@tailwindcss/forms";
+import typography from "@tailwindcss/typography";
 import colors from "tailwindcss/colors";
 import { fontFamily } from "tailwindcss/defaultTheme";
 
@@ -65,7 +67,7 @@ const config = {
       }),
     },
   },
-  plugins: [require("@tailwindcss/forms"), require("@tailwindcss/typography")],
+  plugins: [forms, typography],
 } as Config;
 
 export default config;

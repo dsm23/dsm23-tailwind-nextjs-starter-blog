@@ -1,3 +1,4 @@
+import type { PropsWithChildren } from "react";
 import { Metadata } from "next";
 import { Space_Grotesk } from "next/font/google";
 import { Analytics, AnalyticsConfig } from "pliny/analytics";
@@ -58,11 +59,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: PropsWithChildren) {
   const basePath = process.env.BASE_PATH || "";
 
   return (
@@ -71,7 +68,7 @@ export default function RootLayout({
       className={`${space_grotesk.variable} scroll-smooth`}
       suppressHydrationWarning
     >
-      <link
+      {/* <link
         rel="apple-touch-icon"
         sizes="76x76"
         href={`${basePath}/static/favicons/apple-touch-icon.png`}
@@ -96,7 +93,7 @@ export default function RootLayout({
         rel="mask-icon"
         href={`${basePath}/static/favicons/safari-pinned-tab.svg`}
         color="#5bbad5"
-      />
+      /> */}
       <meta name="msapplication-TileColor" content="#000000" />
       <meta
         name="theme-color"
@@ -108,11 +105,11 @@ export default function RootLayout({
         media="(prefers-color-scheme: dark)"
         content="#000"
       />
-      <link
+      {/* <link
         rel="alternate"
         type="application/rss+xml"
         href={`${basePath}/feed.xml`}
-      />
+      /> */}
       <body className="bg-white pl-[calc(100vw-100%)] text-black antialiased dark:bg-gray-950 dark:text-white">
         <ThemeProviders>
           <Analytics

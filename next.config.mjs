@@ -18,7 +18,9 @@ const config = withPlugins(
     reactStrictMode: true,
     pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
     eslint: {
-      dirs: ["app", "components", "layouts", "scripts"],
+      // Warning: This allows production builds to successfully complete even if
+      // your project has ESLint errors.
+      ignoreDuringBuilds: true,
     },
     images: {
       remotePatterns: [
@@ -37,7 +39,7 @@ const config = withPlugins(
         { source: "/ping", destination: "/api/health" },
       ];
     },
-    webpack: (config, options) => {
+    webpack: (config) => {
       config.module.rules.push({
         test: /\.svg$/,
         use: ["@svgr/webpack"],

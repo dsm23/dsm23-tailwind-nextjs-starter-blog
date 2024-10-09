@@ -29,6 +29,9 @@ importers:
       body-scroll-lock:
         specifier: ^4.0.0-beta.0
         version: 4.0.0-beta.0
+      clsx:
+        specifier: ^2.1.1
+        version: 2.1.1
       contentlayer2:
         specifier: 0.5.1
         version: 0.5.1(esbuild@0.24.0)
@@ -101,6 +104,9 @@ importers:
       remark-math:
         specifier: ^6.0.0
         version: 6.0.0
+      tailwind-merge:
+        specifier: ^2.5.3
+        version: 2.5.3
       tailwindcss:
         specifier: ^3.4.3
         version: 3.4.13
@@ -168,6 +174,9 @@ importers:
       eslint-config-prettier:
         specifier: ^9.1.0
         version: 9.1.0(eslint@9.12.0(jiti@2.3.1))
+      eslint-plugin-jsx-a11y:
+        specifier: ^6.10.0
+        version: 6.10.0(eslint@9.12.0(jiti@2.3.1))
       eslint-plugin-mdx:
         specifier: ^3.1.5
         version: 3.1.5(eslint@9.12.0(jiti@2.3.1))
@@ -5486,6 +5495,9 @@ packages:
   table@6.8.2:
     resolution: {integrity: sha512-w2sfv80nrAh2VCbqR5AK27wswXhqcck2AhfnNW76beQXskGZ1V12GwS//yYVa3d3fcvAip2OUnbDAjW2k3v9fA==}
     engines: {node: '>=10.0.0'}
+
+  tailwind-merge@2.5.3:
+    resolution: {integrity: sha512-d9ZolCAIzom1nf/5p4LdD5zvjmgSxY0BGgdSvmXIoMYAiPdAW/dSpP7joCDYFY7r/HkEa2qmPtkgsu0xjQeQtw==}
 
   tailwindcss@3.4.13:
     resolution: {integrity: sha512-KqjHOJKogOUt5Bs752ykCeiwvi0fKVkr5oqsFNt/8px/tA8scFPIlkygsf6jXrfCqGHz7VflA6+yytWuM+XhFw==}
@@ -12412,6 +12424,8 @@ snapshots:
       slice-ansi: 4.0.0
       string-width: 4.2.3
       strip-ansi: 6.0.1
+
+  tailwind-merge@2.5.3: {}
 
   tailwindcss@3.4.13:
     dependencies:

@@ -45,7 +45,7 @@ jobs:
       - name: Format check
         run: pnpm fmt.check
       - name: Lint check
-        run: pnpm lint:css
+        run: pnpm lint
       - run: pnpm build
         env:
           EXPORT: 1

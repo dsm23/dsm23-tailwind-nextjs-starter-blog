@@ -1,3 +1,4 @@
+import { cn } from "~/utils/classNames";
 import {
   Facebook,
   Github,
@@ -25,12 +26,12 @@ const components = {
 };
 
 type SocialIconProps = {
+  className?: string;
   kind: keyof typeof components;
   href: string | undefined;
-  size?: number;
 };
 
-const SocialIcon = ({ kind, href, size = 8 }: SocialIconProps) => {
+const SocialIcon = ({ className, kind, href }: SocialIconProps) => {
   if (
     !href ||
     (kind === "mail" &&
@@ -49,7 +50,10 @@ const SocialIcon = ({ kind, href, size = 8 }: SocialIconProps) => {
     >
       <span className="sr-only">{kind}</span>
       <SocialSvg
-        className={`fill-current text-gray-700 hover:text-primary-500 dark:text-gray-200 dark:hover:text-primary-400 size-${size}`}
+        className={cn(
+          "size-8 fill-current text-gray-700 hover:text-primary-500 dark:text-gray-200 dark:hover:text-primary-400",
+          className,
+        )}
       />
     </a>
   );

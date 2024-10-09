@@ -5,6 +5,7 @@ import { includeIgnoreFile } from "@eslint/compat";
 import { FlatCompat } from "@eslint/eslintrc";
 import js from "@eslint/js";
 import prettier from "eslint-config-prettier";
+import jsxA11y from "eslint-plugin-jsx-a11y";
 import * as mdx from "eslint-plugin-mdx";
 import react from "eslint-plugin-react";
 // import storybook from "eslint-plugin-storybook";
@@ -32,6 +33,10 @@ const compatConfig = compat.config({
 export default ts.config(
   includeIgnoreFile(gitignorePath),
   {
+    // parsing errors but works in dev server
+    ignores: ["**/deriving-ols-estimator.mdx"],
+  },
+  {
     files: ["**/*.{js,mjs,cjs,ts,md,mdx,jsx,tsx}"],
     languageOptions: {
       globals: globals.nodeBuiltin,
@@ -48,6 +53,7 @@ export default ts.config(
   ...ts.configs.stylistic,
   react.configs.flat["jsx-runtime"],
   prettier,
+  jsxA11y.flatConfigs.recommended,
   ...tailwind.configs["flat/recommended"],
   ...compatConfig,
   {
@@ -84,6 +90,7 @@ export default ts.config(
       },
     },
   },
+
   // {
   //   files: [
   //     "*.stories.@(ts|tsx|js|jsx|mjs|cjs)",
@@ -138,7 +145,7 @@ export default ts.config(
     },
   },
   {
-    // Configure.mdx
+    // Configure.md
     files: ["**/*.mdx"],
     rules: {
       "react/jsx-uses-vars": "error",
